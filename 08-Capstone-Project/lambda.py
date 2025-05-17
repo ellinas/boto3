@@ -17,7 +17,7 @@ def extract_metadata(event):
 def add_to_database(bucket, key, file_type, size):
     id = f"{bucket}/{key}"
     response = dynamodb.put_item(
-        TableName='MediaMetadata',  # Change to your table
+        TableName='Media',  # Change to your table
         Item={
             'id': {'S': id},
             'filetype': {'S': file_type},
